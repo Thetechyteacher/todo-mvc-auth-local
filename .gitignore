@@ -1,8 +1,5 @@
 node_modules
 .vscode/*
-<<<<<<< HEAD
 dotenv
-=======
 .env
 dotenv
->>>>>>> a0b938c (added dotenv to gitignore)
