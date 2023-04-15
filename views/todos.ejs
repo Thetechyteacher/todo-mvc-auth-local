@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Greatreads</title>
+    <title>My To-do</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&family=Indie+Flower&family=Patrick+Hand&family=Raleway:ital,wght@0,200;0,300;0,500;1,100;1,200;1,300;1,400&family=Sono:wght@200;300;400;500;600&family=Zeyada&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>My Books</h1>
+    <h1>What's on my list today?</h1>
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
@@ -21,11 +21,11 @@
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %>, you have <%= left %> books left to read.</h2>
+    <h2><%= user.userName %>, you have <%= left %> things left to do.</h2>
 
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Book name" name='todoItem'>
-        <input type="submit"> 
+        <input type="text" placeholder="To do" name='todoItem'>
+        <input type="submit" value="Add"> 
     </form>
 <div class="anchor">
     <a href="/logout">Logout</a>
